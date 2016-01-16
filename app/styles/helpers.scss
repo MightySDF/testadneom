@@ -1,0 +1,25 @@
+
+/* FONT SIZE */
+.sixteen {font-size:16px;}
+.eighteen {font-size:18px;}
+
+/* DISPLAYS AND FLOATS */
+.block {display:block;}
+.inline {display:inline;}
+.inline-block {display:inline-block;}
+
+.left {float:left;}
+.right {float:right;}
+.clear {float:none; clear:both; width:0; height:0;}
+
+.right-text {text-align:right;}
+.left-text {text-align:left;}
+.center-text {text-align:center;}
+.center {margin:auto}
+
+/* COLORS */
+$color-grey : #333333;
+$color-purple : #a95dcf;
+$color-green : #85d54d;
+$color-orange : #e8712f;
+$color-blue : #47b1e4;
