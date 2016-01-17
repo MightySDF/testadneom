@@ -1,9 +1,15 @@
-
+/* ************************************** */
 /* FONT SIZE */
+/* ************************************** */
+
 .sixteen {font-size:16px;}
 .eighteen {font-size:18px;}
 
+/* ************************************** */
 /* DISPLAYS AND FLOATS */
+/* ************************************** */
+
+.hide {display:none;}
 .block {display:block;}
 .inline {display:inline;}
 .inline-block {display:inline-block;}
@@ -17,9 +23,68 @@
 .center-text {text-align:center;}
 .center {margin:auto}
 
+/* ************************************** */
+/* MARGINS */
+/* ************************************** */
+
+@for $i from 0 through 4 {
+	$value: ($i * 10px);
+	/* margins */
+	.m-#{$i} {margin: $value;}
+	.ml-#{$i} {margin-left: $value;}
+	.mr-#{$i} {margin-right: $value;}
+	.mt-#{$i} {margin-top: $value;}
+	.mb-#{$i} {margin-bottom: $value;}
+	/* paddings */
+	.p-#{$i} {padding: $value;}
+	.pl-#{$i} {padding-left: $value;}
+	.pr-#{$i} {padding-right: $value;}
+	.pt-#{$i} {padding-top: $value;}
+	.pb-#{$i} {padding-bottom: $value;}
+}
+
+/* ************************************** */
 /* COLORS */
-$color-grey : #333333;
-$color-purple : #a95dcf;
-$color-green : #85d54d;
-$color-orange : #e8712f;
-$color-blue : #47b1e4;
+/* ************************************** */
+
+$grey : #333333;
+$purple : #a95dcf;
+$green : #85d54d;
+$orange : #e8712f;
+$blue : #47b1e4;
+
+
+/* ************************************** */
+/* BOX SHADOW */
+/* ************************************** */
+
+@mixin box-shadow($params) {
+  -webkit-box-shadow : #{$params};
+     -moz-box-shadow : #{$params};
+          box-shadow : #{$params};
+}
+
+/* ************************************** */
+/* BORDER RADIUS */
+/* ************************************** */
+
+@mixin border-radius($params) {
+  -webkit-border-radius : #{$params};
+     -moz-border-radius : #{$params};
+          border-radius : #{$params};
+}
+
+/* ************************************** */
+/* Upvote color patterns */
+/* ************************************** */
+@for $i from 0 through 10 {
+	
+	$redValue: (71 - ($i)*35); /* Current value for red color in RGB */
+	$greenValue: (177 - ($i)*30); /* Current value for green color in RGB */
+	$blueValue: (238 - ($i)*10); /* Current value for blue color in RGB */
+	
+	.lastNews .news-wrapper .news-elt .upvotePost.upvote-#{$i} {background-color: rgb($redValue, $greenValue, $blueValue);}
+	
+}
+
+

@@ -24,10 +24,10 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/submit', {
-        templateUrl: 'views/submit.html',
-        controller: 'SubmitCtrl',
-        controllerAs: 'submit'
+      .when('/comments', {
+        templateUrl: 'views/comments.html',
+        controller: 'CommentsCtrl',
+        controllerAs: 'comments'
       })
       .otherwise({
         redirectTo: '/'

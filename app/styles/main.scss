@@ -6,15 +6,104 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import 'helpers';
 
 /* ************************************** */
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(HelveticaNeueLTStdLt.otf);
+}
+/* ************************************** */
 
-h1 {
-	margin:5px 30 0 0;
-	padding:0;
+body {
+	background: url(../images/megaphone_bg_news.png) no-repeat 10px 200px $green;
+	color:$grey;
 }
 
+h1 {
+	padding:0;
+	font-size:70px;
+	font-family:HelveticaNeue, Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	color:#fff;
+	border-bottom:solid 3px #fff;
+}
+
+h2 {
+	font-family:HelveticaNeue, Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	border-bottom:solid 2px $grey;
+}
+
+ol, ul {list-style:none; padding-left:0;}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.header {
+	height:150px;
+	.navbar-default {
+		border-bottom:none;
+		height:75px;
+		/* @include box-shadow(0 0 15px rgba(0, 0, 0, 0.5)); */
+	}
+}
+
+.back-button {color:#fff; line-height:10px;}
+
+input[type=text] {
+	@include border-radius(5px);
+	border:solid 1px #cccccc;
+	padding:5px;
+}
+label.mt-2 {margin-top:25px;}
+
+.newNews {
+	background:#ffffff;
+	@include border-radius(5px);
+}
+
+.submit-button {
+		background:$orange;
+		color:#fff;
+		@include border-radius(5px);
+		border:none;
+		&:hover {background:#ed582f;}
+	}
+.comment-form {border-bottom:dashed 1px #cccccc;}
 
 
+.lastNews {
+	.news-wrapper {
+		@include border-radius(5px);
+		list-style:none;
+		background:#ffffff;
+		
+		.news-elt {
+			border-bottom:dashed 1px #cccccc;
+			
+			&:last-child {border-bottom:none;}
+			
+			.upvotePost {
+				width:40px;
+				height:40px;
+				@include border-radius(20px);
+				border:none;
+				background-color:#333;
+				color:#fff;
+				text-align: center;
+				padding-top: 7px;
+				letter-spacing: -1px;
+			}
+			.upvote-icon {position:relative; top:-2px;}
+		}
+		
+	}
+	
+}
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  
+@media screen and (max-width: 640px) {
+	h1 {
+		font-size: 40px;
+		margin-top: -30px;
+	}
 }

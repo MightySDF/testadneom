@@ -11,49 +11,35 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+	<link rel="shortcut icon" href="http://www.adneom.com/www/public/images/favicon.ico" type="image/x-icon">
     <!-- endbuild -->
   </head>
   <body ng-app="adneomTestApp">
 
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-		  
-			<a href="#/">
-				<img src="images/adneomLogo.jpg" alt="Adneom News" height="50" />
-			</a>
-			
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-            </button>
-            
-          </div>
+	
+		<div class="header">
+		  <div class="navbar navbar-default" role="navigation">
+			<div class="container">
+			  <div class="navbar-header">
+			  
+				<a class="logo" href="#/">
+					<img src="images/adneomnews.png" alt="Adneom News" class="col-md-12 col-sm-12 col-xs-12" />
+				</a>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+			  </div>			  
+			</div>
+		  </div>
+		</div>
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">Submit a new post</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div class="container">
+		<div ng-view=""></div>
+		</div>
 
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p></p>
-      </div>
-    </div>
-
+		<div class="footer">
+		  <div class="container">
+			<p></p>
+		  </div>
+		</div>
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -73,7 +59,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/comments.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,0 +1,58 @@
+<div class="main-container row">
+	
+	<div class="col-md-8 col-sm-8 col-xs-12">
+		<h1>Comments</h1>
+		<a href="#/" class="right eighteen back-button">Back</a>
+	</div>
+	
+	
+	<div class="lastNews col-md-8 col-sm-8 col-xs-12">
+		<div class="news-wrapper">
+		
+			<h2 class="p-2">Comments on : <a href="{{selectedPost.link}}" title="External link" target="blank">{{selectedPost.title}}</a></h2>
+			
+			<form name="postForm" class="pt-0 pb-2 pl-2 pr-2 comment-form" ng-submit="submitMyComment()">
+				<h3 class="mt-0 mb-0">Post your comentary</h3>
+				<fieldset>
+					<legend class="hide">This fieldset allows you to publish a comment about this post. Comments are composed of your name/pseudonym and a text.</legend>
+					<label class="col-md-3 col-sm-3 col-xs-3 mt-2" for="newAuthor">Author</label>
+					<input class="col-md-9 col-sm-9 col-xs-9 mt-2" id="newAuthor" name="newAuthor" type="text" placeholder="Your name or pseudonym here"
+					ng-model="newComment.newAuthor" />
+					<br />
+					<label class="col-md-3 col-sm-3 col-xs-3 mt-2" for="newComment">Your comment</label>
+					<input class="col-md-9 col-sm-9 col-xs-9 mt-2" id="newComment" name="newComment" type="text" placeholder="Your comment here"
+					ng-model="newComment.newBody" />
+					<br />
+					<button type="submit" class="mt-2 pl-2 pr-2 pt-1 pb-1 right eighteen submit-button">Submit</button>
+					<span class="clear"></span>
+				</fieldset>
+			</form>
+			
+			<ul>
+				<li ng-repeat="commentItem in selectedPost.comments" class="news-elt row p-2">
+					<div class="mr-2 left">
+						<div class="upvotePost upvote-{{commentItem.upvote}} eighteen">
+							<span ng-if="commentItem.upvote>0">+</span>
+							{{commentItem.upvote}}
+						</div>
+					</div>
+					<div class="postContent col-md-9 col-sm-9 col-xs-9">
+						<strong class="sixteen">{{commentItem.author}}</strong>
+						<br />
+						<p>{{commentItem.body}}</p>
+						<span ng-if="commentItem.upvote>0" class="">{{commentItem.upvote}} users liked it.</span>
+						<span ng-if="commentItem.upvote==0" class="">No one liked it so far.</span>
+						<a href="" class="" ng-click="upvoteComment($index)">
+							<span class="">What about you ?</span>
+							<img class="upvote-icon" src="images/upvote.gif" alt="Vote now" />
+						</a>
+					</div>
+				</li>
+			</ul>
+	
+		</div>
+	</div>
+	
+</div>
+
+ 
