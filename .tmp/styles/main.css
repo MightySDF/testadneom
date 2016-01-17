@@ -9199,55 +9199,68 @@ ol, ul {
 }
 
 /* line 53, ../../app/styles/main.scss */
+.ico-upvote {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background: url(../images/upvote2.gif) top left no-repeat;
+}
+
+/* line 60, ../../app/styles/main.scss */
+a:hover .ico-upvote {
+  background-position: top right;
+}
+
+/* line 63, ../../app/styles/main.scss */
 input[type=text] {
   border-radius: 5px;
   border: solid 1px #cccccc;
   padding: 5px;
 }
 
-/* line 58, ../../app/styles/main.scss */
+/* line 68, ../../app/styles/main.scss */
 label.mt-2 {
   margin-top: 25px;
 }
 
-/* line 60, ../../app/styles/main.scss */
+/* line 70, ../../app/styles/main.scss */
 .newNews {
   background: #ffffff;
   border-radius: 5px;
 }
 
-/* line 65, ../../app/styles/main.scss */
+/* line 75, ../../app/styles/main.scss */
 .submit-button {
   background: #e8712f;
   color: #fff;
   border-radius: 5px;
   border: none;
 }
-/* line 70, ../../app/styles/main.scss */
+/* line 80, ../../app/styles/main.scss */
 .submit-button:hover {
   background: #ed582f;
 }
 
-/* line 72, ../../app/styles/main.scss */
+/* line 82, ../../app/styles/main.scss */
 .comment-form {
   border-bottom: dashed 1px #cccccc;
 }
 
-/* line 76, ../../app/styles/main.scss */
+/* line 86, ../../app/styles/main.scss */
 .lastNews .news-wrapper {
   border-radius: 5px;
   list-style: none;
   background: #ffffff;
 }
-/* line 81, ../../app/styles/main.scss */
+/* line 91, ../../app/styles/main.scss */
 .lastNews .news-wrapper .news-elt {
   border-bottom: dashed 1px #cccccc;
 }
-/* line 84, ../../app/styles/main.scss */
+/* line 94, ../../app/styles/main.scss */
 .lastNews .news-wrapper .news-elt:last-child {
   border-bottom: none;
 }
-/* line 86, ../../app/styles/main.scss */
+/* line 96, ../../app/styles/main.scss */
 .lastNews .news-wrapper .news-elt .upvotePost {
   width: 40px;
   height: 40px;
@@ -9259,7 +9272,7 @@ label.mt-2 {
   padding-top: 7px;
   letter-spacing: -1px;
 }
-/* line 97, ../../app/styles/main.scss */
+/* line 107, ../../app/styles/main.scss */
 .lastNews .news-wrapper .news-elt .upvote-icon {
   position: relative;
   top: -2px;
@@ -9267,7 +9280,7 @@ label.mt-2 {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (max-width: 640px) {
-  /* line 105, ../../app/styles/main.scss */
+  /* line 115, ../../app/styles/main.scss */
   h1 {
     font-size: 40px;
     margin-top: -30px;

@@ -50,6 +50,16 @@ ol, ul {list-style:none; padding-left:0;}
 
 .back-button {color:#fff; line-height:10px;}
 
+.ico-upvote {
+	display:inline-block;
+	height:18px;
+	width:18px;
+	background:url(../images/upvote2.gif) top left no-repeat;
+}
+a:hover {
+	.ico-upvote {background-position:top right;}
+}
+
 input[type=text] {
 	@include border-radius(5px);
 	border:solid 1px #cccccc;
