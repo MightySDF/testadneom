@@ -60,7 +60,7 @@ app.run(function($rootScope) {
 });
 
 app.controller('MainCtrl', function MainCtrl($scope, $rootScope) {
-	
+
 	$scope.upvotePost = function(id){
 		$rootScope.postList[id].upvote = $rootScope.postList[id].upvote +1;
 	};

@@ -17,11 +17,11 @@
 					<legend class="hide">This fieldset allows you to publish a comment about this post. Comments are composed of your name/pseudonym and a text.</legend>
 					<label class="col-md-3 col-sm-3 col-xs-3 mt-2" for="newAuthor">Author</label>
 					<input class="col-md-9 col-sm-9 col-xs-9 mt-2" id="newAuthor" name="newAuthor" type="text" placeholder="Your name or pseudonym here"
-					ng-model="newComment.newAuthor" />
+					ng-model="newComment.newAuthor" required />
 					<br />
 					<label class="col-md-3 col-sm-3 col-xs-3 mt-2" for="newComment">Your comment</label>
 					<input class="col-md-9 col-sm-9 col-xs-9 mt-2" id="newComment" name="newComment" type="text" placeholder="Your comment here"
-					ng-model="newComment.newBody" />
+					ng-model="newComment.newBody" required />
 					<br />
 					<button type="submit" class="mt-2 pl-2 pr-2 pt-1 pb-1 right eighteen submit-button">Submit</button>
 					<span class="clear"></span>
